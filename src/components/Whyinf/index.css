@@ -1,0 +1,16 @@
+.why-head {
+  font-size: 36px;
+  font-weight: bold;
+}
+.icon-box {
+  background-color: #0776f1;
+  padding: 16px;
+  color: aliceblue;
+  border-radius: 8px;
+  width: 20px;
+}
+.why-mid-head {
+  font-size: 24px;
+  font-weight: 500;
+  color: #444;
+}

@@ -1,0 +1,11 @@
+.carousel-inner{
+    height: 350px;
+}
+.carousel-control-next, .carousel-control-prev {
+    width: 8%;
+}
+@media (max-width:550px) {
+    .carousel-inner{
+        height: 500px;
+    }
+  }

@@ -1,0 +1,21 @@
+.testimonaial-bg {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 172, 238, 1) 0%,
+    rgba(2, 126, 251, 1) 100%
+  );
+  padding: 3rem;
+}
+.testimonaial-content {
+  height: 350px;
+}
+
+@media (max-width: 550px) {
+  .testimonaial-bg {
+    padding: 0;
+    text-align: center;
+  }
+  .testimonaial-content {
+    height: 450px;
+  }
+}

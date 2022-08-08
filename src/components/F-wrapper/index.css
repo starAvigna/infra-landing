@@ -1,0 +1,28 @@
+.head-f-text {
+  font-size: 22px;
+  color: black;
+  font-weight: bold;
+}
+.fwrapper{
+  margin-top: 80px;
+}
+.head-fs-text {
+  font-size: 20px;
+  color: #266bb1;
+  font-weight: bold;
+}
+.btn-controll button {
+  float: left;
+}
+
+@media (min-width: 640px) {
+  .btn-controll button {
+    float: right;
+  }
+  
+}
+@media (max-width: 550px) {
+  .fwrapper{
+    margin-top: 20px;
+  } 
+}

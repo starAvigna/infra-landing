@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'PollerOne';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./assets/Font/PollerOne-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Bangers';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./assets/Font/Bangers-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Abel';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./assets/Font/Abel-Regular.ttf') format('truetype');
+}
+* {
+  font-family: Abel, sans-serif;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.f-PollerOne {
+  font-family: PollerOne;
+}
+.f-Bangers {
+  font-family: Bangers;
+}
+.modal_heading {
+  font-weight: 900 !important;
+  font-size: 30px !important;
+  text-transform: uppercase;
+}
+
+.sticky {
+  height: 50px;
+  width: 50px;
+  background-color: dodgerblue;
+  border-radius: 50%;
+  position: fixed;
+  right: 5px;
+  bottom: 10px;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  width: 50px;
+  padding: 16px;
+  color: aliceblue;
+}
+.modal-custom-input{
+  border-radius: 0px !important;
+}
+.modal-content {
+  border-radius: 0px !important; 
+}
+.modal_close{
+  font-size: xx-large;
+  cursor: pointer;
+}

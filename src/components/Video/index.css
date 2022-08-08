@@ -1,0 +1,47 @@
+.video_wrapper{
+   
+    /* background: linear-gradient(
+        0deg,
+        rgba(0, 172, 238, 1) 0%,
+        rgba(2, 126, 251, 1) 100%
+      ); */
+}
+.video_frame{
+    height:90%;
+    border-radius: 24px 24px 0px 0px;
+    width:70%;
+    
+}
+.main_wrapper{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items:center ;
+}
+.video_controller{
+    width: 100%;
+    height: 40px;
+  text-align: center;
+    position: relative;
+    margin-top:0px;
+   
+}
+.video_bind{
+width: 100%;
+border-radius: 24px 24px 0px 0px;
+padding: 0;
+margin-bottom: 10px;
+
+}
+.btn-play{
+    border: none;
+    margin-top:-100px;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 172, 238, 1) 0%,
+        rgba(2, 126, 251, 1) 100%
+      );
+      border-radius: 50%;
+      color: aliceblue;
+      padding-left: 8px;
+}
