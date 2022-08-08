@@ -23,7 +23,7 @@ const Whyinf = () => {
       </div>
       <div>
         <div className="col-md-8 m-auto ">
-          <p className="text-center pb-4">
+          <p className="text-center pb-4 px-2">
             The reasons to use InfraGuard are plenty. Here are some of the most
             common things our customers tell us
           </p>
