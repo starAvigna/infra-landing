@@ -6,8 +6,8 @@ import Sim4 from '../../assets/pic-info-4.gif'
 import './index.css'
 export default function SimplifyOperation() {
   return (
-    <div
-      className="container-fluid py-5"
+    <div 
+      className="container-fluid py-5 benefits-scroll"
       style={{ backgroundColor: '#f9fafb' }}
     >
       <div className="col-sm-10 m-auto text-center">

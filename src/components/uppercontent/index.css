@@ -20,6 +20,50 @@
   align-items: center;
   justify-content: center;
 }
+.chatBox6 {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 172, 238, 1) 0%,
+    rgba(2, 126, 251, 1) 100%
+  );
+  width: 50%;
+  height: 40px;
+  line-height: 15px;
+  font-size: 14px;
+  border-radius: 0px 12px 12px 12px;
+  color: #ffffff;
+  width: 110px;
+  position: absolute;
+  left: 40px;
+  top: -10px;
+  text-align: center;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chatBox5 {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 172, 238, 1) 0%,
+    rgba(2, 126, 251, 1) 100%
+  );
+  width: 50%;
+  height: 40px;
+  line-height: 15px;
+  font-size: 14px;
+  border-radius: 0px 12px 12px 12px;
+  color: #ffffff;
+  width: 110px;
+  position: absolute;
+  left: 40px;
+  top: -10px;
+  text-align: center;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .chatBox4 {
   background: linear-gradient(
     0deg,
@@ -546,7 +590,7 @@
     text-align: center;
     padding-top: 10px;
   }
-  .chatBox4 {
+  .chatBox4{
     background: linear-gradient(
       0deg,
       rgba(0, 172, 238, 1) 0%,
@@ -556,12 +600,56 @@
     height: 40px;
     line-height: 15px;
     font-size: 14px;
-    border-radius: 0px 12px 12px 12px;
+    border-radius: 12px 12px 12px 0px;
     color: #ffffff;
     width: 110px;
     position: absolute;
-    left: 120px;
-    top: -40px;
+    left: -20px;
+    top: -48px;
+    text-align: center;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .chatBox5{
+    background: linear-gradient(
+      0deg,
+      rgba(0, 172, 238, 1) 0%,
+      rgba(2, 126, 251, 1) 100%
+    );
+    width: 50%;
+    height: 40px;
+    line-height: 15px;
+    font-size: 14px;
+    border-radius: 12px 0px 12px 12px;
+    color: #ffffff;
+    width: 100px;
+    position: absolute;
+    left: -90px;
+    top: 35px;
+    text-align: center;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .chatBox6{
+    background: linear-gradient(
+      0deg,
+      rgba(0, 172, 238, 1) 0%,
+      rgba(2, 126, 251, 1) 100%
+    );
+    width: 50%;
+    height: 40px;
+    line-height: 15px;
+    font-size: 14px;
+    border-radius: 12px 0px 12px 12px;
+    color: #ffffff;
+    width: 100px;
+    position: absolute;
+    left: -90px;
+    top: 35px;
     text-align: center;
     padding-top: 10px;
     display: flex;

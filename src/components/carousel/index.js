@@ -9,7 +9,7 @@ import Silder6 from '../../assets/Iscale.png'
 import Testimonials from '../testimonial'
 function UncontrolledExample() {
   return (
-    <Carousel>
+    <Carousel className='customer-scroll'>
       <Carousel.Item>
         <Testimonials
         img_path={Silder1}

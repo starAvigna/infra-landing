@@ -15,7 +15,7 @@ const Whyinf = () => {
   const handleShow = () => setShow(true)
   const [modalShow, setModalShow] = useState(false)
   return (
-    <div className="py-5">
+    <div className="py-5 about-scroll">
       <div className="container">
         <p className="text-center sim-heading animate__animated animate__pulse animate__infinite">
           Why InfraGuard?

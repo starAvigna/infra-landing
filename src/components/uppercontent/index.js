@@ -99,7 +99,7 @@ export default function UpperBody() {
   const showinfo5 = () => {
     setClassname5({
       mode: true,
-      Classaccess5: 'chatBox',
+      Classaccess5: 'chatBox5',
     })
     classname5.mode
       ? setClassname5({
@@ -108,13 +108,13 @@ export default function UpperBody() {
         })
       : setClassname5({
           mode: true,
-          Classaccess5: 'chatBox',
+          Classaccess5: 'chatBox5',
         })
   }
   const showinfo6 = () => {
     setClassname6({
       mode: true,
-      Classaccess6: 'chatBox',
+      Classaccess6: 'chatBox6',
     })
     classname6.mode
       ? setClassname6({
@@ -123,7 +123,7 @@ export default function UpperBody() {
         })
       : setClassname6({
           mode: true,
-          Classaccess6: 'chatBox',
+          Classaccess6: 'chatBox6',
         })
   }
   useEffect(() => {
@@ -145,11 +145,11 @@ export default function UpperBody() {
     })
     setClassname5({
       mode: true,
-      Classaccess5: 'chatBox',
+      Classaccess5: 'chatBox5',
     })
     setClassname6({
       mode: true,
-      Classaccess6: 'chatBox',
+      Classaccess6: 'chatBox6',
     })
 
     setTimeout(() => {

@@ -1,19 +1,27 @@
-import Container from 'react-bootstrap/Container'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
-import Navbar from 'react-bootstrap/Navbar'
-import Button from 'react-bootstrap/Button'
-import Modal from 'react-bootstrap/Modal'
-import Logo from '../../assets/Infraguard Logo.svg'
-import { Link } from 'react-router-dom'
-import './index.css'
-import { useState } from 'react'
-import { Offcanvas } from 'react-bootstrap'
+import Container from "react-bootstrap/Container";
+import { scroller } from "react-scroll";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import Navbar from "react-bootstrap/Navbar";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import Logo from "../../assets/Infraguard Logo.svg";
+import { Link } from "react-router-dom";
+import "./index.css";
+import { useState } from "react";
+import { Offcanvas } from "react-bootstrap";
 export default function Header() {
-  const [show, setShow] = useState(false)
-  const handleClose = () => setShow(false)
-  const handleShow = () => setShow(true)
-  const [modalShow, setModalShow] = useState(false)
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const [modalShow, setModalShow] = useState(false);
+  const scrollToSection = (value) => {
+    scroller.scrollTo( value, {
+      duration: 100,
+      delay: 0,
+      smooth: "easeInOutQuart",
+    });
+  };
   return (
     <div className="container-fluid">
       <div className="container">
@@ -33,18 +41,27 @@ export default function Header() {
                   <div className="link-wrapper">
                     <ul>
                       <li className="canvas-link">
-                        {' '}
-                        <Link className="upper-anchor" to="/">
-                          About
-                        </Link>
-                      </li>
-                      <li className="canvas-link">
-                        <Link className="upper-anchor" to="/">
+                        {" "}
+                        <Link onClick={()=>{
+                          scrollToSection("benefits-scroll")
+                          handleClose()
+                        } } className="upper-anchor" to="#benefits">
                           Benefits
                         </Link>
                       </li>
                       <li className="canvas-link">
-                        <Link className="upper-anchor" to="/">
+                        <Link onClick={()=>{
+                          scrollToSection("about-scroll")
+                          handleClose()
+                        } } className="upper-anchor" to="#about">
+                          About
+                        </Link>
+                      </li>
+                      <li className="canvas-link">
+                        <Link onClick={()=>{
+                          scrollToSection("customer-scroll")
+                          handleClose()
+                        } } className="upper-anchor" to="#customer">
                           Customer
                         </Link>
                       </li>
@@ -52,8 +69,8 @@ export default function Header() {
                         <Link
                           to="/"
                           onClick={() => {
-                            handleClose()
-                            setModalShow(true)
+                            handleClose();
+                            setModalShow(true);
                           }}
                           className="upper-anchor"
                         >
@@ -132,7 +149,7 @@ export default function Header() {
               <div></div>
               <textarea
                 placeholder="Message"
-                style={{ height: '110px' }}
+                style={{ height: "110px" }}
                 className="modal-custom-input  ps-3"
               />
             </div>
@@ -143,5 +160,5 @@ export default function Header() {
         </Modal.Footer>
       </Modal>
     </div>
-  )
+  );
 }
