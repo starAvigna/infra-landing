@@ -5,7 +5,7 @@ export default function PictureInfo(props) {
     <div className="text-center">
       <div className="picinfo">
         <div>
-          <img className='simply-img py-4' src={props.image} />
+          <img className='simply-img py-4' src={props.image} alt={props.alt} />
         </div>
         <div className="img-box-info py-5" >
           <div>

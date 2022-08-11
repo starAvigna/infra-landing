@@ -24,6 +24,7 @@ export default function SimplifyOperation() {
               image={Sim1}
               heading="Patch Management"
               message="Supercharge your patch management operations with powerful automation."
+              alt="Patch Management"
             />
           </div>
           <div className="col-md-3">
@@ -31,6 +32,7 @@ export default function SimplifyOperation() {
               image={Sim2}
               heading="Privileged Access Management"
               message="Take complete control of who has access to cloud servers"
+              alt="Privileged Access Management"
             />
           </div>
           <div className="col-md-3">
@@ -38,6 +40,7 @@ export default function SimplifyOperation() {
               image={Sim3}
               heading="Audit & Compliance"
               message="Securely track and report on all server commands and operations."
+              alt="Audit & Compliance"
             />
           </div>
           <div className="col-md-3">
@@ -45,6 +48,7 @@ export default function SimplifyOperation() {
               image={Sim4}
               heading="Server Administration"
               message="Easily manage your server fleets through a single pane console."
+              alt="Server Administration"
             />
           </div>
         </div>

@@ -84,7 +84,7 @@ export default function UpperBody() {
   const showinfo4 = () => {
     setClassname4({
       mode: true,
-      Classaccess4:'chatBox4',
+      Classaccess4: 'chatBox4',
     })
     classname4.mode
       ? setClassname4({
@@ -213,7 +213,11 @@ export default function UpperBody() {
 
           <div className="col-12 col-sm-6">
             <div className="hl-container pull-right animate__animated animate__bounceInDown">
-              <img src={Home6} className="hl-image" alt="" />
+              <img
+                src={Home6}
+                className="hl-image"
+                alt="A man with several hand to show what he can do for us like server management, patch management process, privileged user access, aws privileged access management, cloud privileged access management, server administration, server management services, cloud server management"
+              />
               <ul>
                 <li className="hl-point hl-point1">
                   <div className="trigger-wrap">

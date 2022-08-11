@@ -5,7 +5,6 @@ import Silder1 from '../../assets/Cloudcomrade.png'
 import Silder3 from '../../assets/axcess.png'
 import Silder4 from '../../assets/TGA.png'
 import Silder5 from '../../assets/Kumolus.png'
-import Silder6 from '../../assets/Iscale.png'
 import Testimonials from '../testimonial'
 function UncontrolledExample() {
   return (
