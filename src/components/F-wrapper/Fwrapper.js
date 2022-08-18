@@ -20,7 +20,7 @@ const Fwrapper = () => {
   const formhandler = async (e) => {
     e.preventDefault();
     const body = JSON.parse(JSON.stringify(inputstate));
-    await axios.post("http://54.179.100.202:8080/send-mail", body).then((res) => {
+    await axios.post("http://54.179.100.202:8081/send-mail", body).then((res) => {
       console.log("res", res);
       swal("Thanks you!", "Our Team Will Contact You Shortly", "success");
     });
