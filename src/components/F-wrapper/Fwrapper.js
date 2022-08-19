@@ -22,7 +22,7 @@ const Fwrapper = () => {
     const body = JSON.parse(JSON.stringify(inputstate));
     await axios.post("http://13.212.178.94:8081/send-mail", body).then((res) => {
       console.log("res", res);
-      swal("Thanks you!", "Our Team Will Contact You Shortly", "success");
+      swal("Thank you!", "Our Team Will Contact You Shortly", "success");
     });
   };
   const inputhandler = (e) => {
