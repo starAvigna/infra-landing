@@ -38,7 +38,7 @@ export default function Header() {
     const body = JSON.parse(JSON.stringify(inputstate));
     await axios.post("http://54.179.100.202:8081/send-mail", body).then((res) => {
       console.log("res", res);
-      swal("Thanks you!", "Our Team Will Contact You Shortly", "success");
+      swal("Thank you!", "Our Team Will Contact You Shortly", "success");
     });
   };
   const inputhandler = (e) => {
