@@ -11,7 +11,7 @@ import Whyinf from './components/Whyinf/Whyinf'
 const Home = () => {
   return (
     <div>
-      <Header />
+      <Header/>
       <UpperBody />
       <SimplifyOperation />
       <Whyinf />

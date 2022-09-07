@@ -1,53 +1,70 @@
-import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMessage } from "@fortawesome/free-solid-svg-icons";
-import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
-import swal from "sweetalert";
-import axios from "axios";
+import React, { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMessage } from '@fortawesome/free-solid-svg-icons'
+import Modal from 'react-bootstrap/Modal'
+import Button from 'react-bootstrap/Button'
+import swal from 'sweetalert'
+import axios from 'axios'
+// import { useForm } from '@formcarry/react'
+import { PopupWidget } from 'react-calendly'
 
 const StickyBox = () => {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-  const [modalShow, setModalShow] = useState(false);
+  const [show, setShow] = useState(false)
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(true)
+  const [modalShow, setModalShow] = useState(false)
   const [inputstate, setInputstate] = useState({
-    first_name: "",
-    last_name: "",
-    company: "",
-    email: "",
-    phone_no: "",
-    message: "",
-  });
-  const formhandler = async (e) => {
-    e.preventDefault();
-    const body = JSON.parse(JSON.stringify(inputstate));
-    await axios
-      .post("http://13.212.178.94:8081/send-mail", body)
-      .then((res) => {
-        console.log("res", res);
-        swal("Thank you!", "Our Team Will Contact You Shortly", "success");
-      });
-  };
+    first_name: '',
+    last_name: '',
+    company: '',
+    email: '',
+    phone_no: '',
+    message: '',
+  })
+  // const formhandler = async (e) => {
+  //   e.preventDefault();
+  //   const body = JSON.parse(JSON.stringify(inputstate));
+  //   await axios
+  //     .post("http://13.212.178.94:8081/send-mail", body)
+  //     .then((res) => {
+  //       console.log("res", res);
+  //       swal("Thank you!", "Our Team Will Contact You Shortly", "success");
+  //     });
+  // };
+  // const { state, submit } = useForm({
+  //   id: '6O96DYpHn',
+  // })
+
+  // if (state.submitting) {
+  //   swal('Thank you!', 'Our Team Will Contact You Shortly', 'success')
+  // }
   const inputhandler = (e) => {
-    const { name, value } = e.target;
-    setInputstate({ ...inputstate, [name]: value });
-  };
+    const { name, value } = e.target
+    setInputstate({ ...inputstate, [name]: value })
+  }
   return (
     <div className="sticky text-center">
-      <FontAwesomeIcon
+      {/* <FontAwesomeIcon
         onClick={() => {
           setModalShow(true);
         }}
         icon={faMessage}
+        
+      /> */}
+      <PopupWidget
+        url="https://calendly.com/infraguard/infraguard-demo"
+        rootElement={document.getElementById('root')}
+        text="Contact Us"
+        className="meassage_button"
       />
-      <Modal
+
+      {/* <Modal
         show={modalShow}
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
-        <form onSubmit={formhandler}>
+        <form onSubmit={submit}>
           <Modal.Header>
             <Modal.Title
               id="contained-modal-title-vcenter"
@@ -118,7 +135,7 @@ const StickyBox = () => {
                   name="message"
                   placeholder="Message"
                   onChange={inputhandler}
-                  style={{ height: "110px" }}
+                  style={{ height: '110px' }}
                   className="modal-custom-input  ps-3"
                 />
               </div>
@@ -130,9 +147,9 @@ const StickyBox = () => {
             </Button>
           </Modal.Footer>
         </form>
-      </Modal>
+      </Modal> */}
     </div>
-  );
-};
+  )
+}
 
-export default StickyBox;
+export default StickyBox

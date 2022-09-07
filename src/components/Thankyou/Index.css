@@ -1,0 +1,29 @@
+.thankyou {
+  box-shadow: 0px 0px 2px 2px #eee;
+  background: linear-gradient(0deg, #00acee, #027efb) !important;
+  width: 50%;
+  margin: auto;
+}
+.thank_desc {
+  color: #fff;
+  font-weight: 500;
+}
+.py-8 {
+  padding-top: 8%;
+}
+
+.back {
+  border-radius: 5px;
+  font-weight: 500;
+  background: linear-gradient(0deg, #0e95ca, #076ace) !important;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.bg_main {
+  background-image: url('../../assets/home-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
+}

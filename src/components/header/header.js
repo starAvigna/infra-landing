@@ -12,6 +12,8 @@ import "./index.css";
 import { useState } from "react";
 import { Offcanvas } from "react-bootstrap";
 import swal from "sweetalert";
+import { useForm } from "@formcarry/react";
+
 export default function Header() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -33,14 +35,21 @@ export default function Header() {
     });
   };
 
-  const formhandler = async (e) => {
-    e.preventDefault();
-    const body = JSON.parse(JSON.stringify(inputstate));
-    await axios.post("http://13.212.178.94:8081/send-mail", body).then((res) => {
-      console.log("res", res);
-      swal("Thank you!", "Our Team Will Contact You Shortly", "success");
-    });
-  };
+  // const formhandler = async (e) => {
+  //   e.preventDefault();
+  //   const body = JSON.parse(JSON.stringify(inputstate));
+  //   await axios.post("http://13.212.178.94:8081/send-mail", body).then((res) => {
+  //     console.log("res", res);
+  //     swal("Thank you!", "Our Team Will Contact You Shortly", "success");
+  //   });
+  // };
+  const { state, submit } = useForm({
+    id: "6O96DYpHn",
+  });
+
+  if (state.submitting) {
+    swal("Thank you!", "Our Team Will Contact You Shortly", "success");
+  }
   const inputhandler = (e) => {
     const { name, value } = e.target;
     setInputstate({ ...inputstate, [name]: value });
@@ -101,7 +110,7 @@ export default function Header() {
                           Customer
                         </Link>
                       </li>
-                      <li className="canvas-link">
+                      {/* <li className="canvas-link">
                         <Link
                           to="/"
                           onClick={() => {
@@ -112,7 +121,7 @@ export default function Header() {
                         >
                           Contact us
                         </Link>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 </Offcanvas.Body>
@@ -127,13 +136,13 @@ export default function Header() {
           </Container>
         </Navbar>
       </div>
-      <Modal
+      {/* <Modal
         show={modalShow}
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
-        <form onSubmit={formhandler}>
+        <form onSubmit={submit}>
           <Modal.Header>
             <Modal.Title
               id="contained-modal-title-vcenter"
@@ -216,7 +225,7 @@ export default function Header() {
             </Button>
           </Modal.Footer>
         </form>
-      </Modal>
+      </Modal> */}
     </div>
   );
 }

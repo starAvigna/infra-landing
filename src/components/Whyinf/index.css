@@ -14,3 +14,21 @@
   font-weight: 500;
   color: #444;
 }
+
+.popupbutton {
+  width: fit-content;
+  margin: auto;
+}
+.calendly-badge-widget .calendly-badge-content {
+  border-radius: 5px !important;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 172, 238, 1) 0%,
+    rgba(2, 126, 251, 1) 100%
+  ) !important;
+  font-weight: 500 !important;
+  font-size: 16px !important;
+}
+.calendly-badge-widget {
+  position: inherit !important;
+}

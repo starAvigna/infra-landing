@@ -23,6 +23,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* overflow: hidden; */
 }
 
 code {
@@ -43,9 +44,9 @@ code {
 }
 
 .sticky {
-  height: 50px;
-  width: 50px;
-  background-color: dodgerblue;
+  /* height: 50px;   */
+  /* width: 50px; */
+  /* background-color: dodgerblue; */
   border-radius: 50%;
   position: fixed;
   right: 5px;
@@ -58,18 +59,31 @@ code {
   padding: 16px;
   color: aliceblue;
 }
-.modal-custom-input{
+.modal-custom-input {
   border-radius: 0px !important;
 }
 .modal-content {
-  border-radius: 0px !important; 
+  border-radius: 0px !important;
 }
-.modal_close{
+.modal_close {
   font-size: xx-large;
   cursor: pointer;
 }
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
+
+.message_button {
+  border-radius: 50%;
+}
+
+/* .VJL48qbQzWENTFAh1Knk {
+  height: 200px !important;
+  display: none !important;
+}
+.jWSwi_R_Xl7kPjUhuQoo {
+  display: none !important;
+} */
+

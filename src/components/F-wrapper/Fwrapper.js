@@ -1,34 +1,44 @@
-import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
-import "./index.css";
-import swal from "sweetalert";
-import axios from "axios";
+import React, { useState } from 'react'
+import Button from 'react-bootstrap/Button'
+import Modal from 'react-bootstrap/Modal'
+import './index.css'
+import swal from 'sweetalert'
+import axios from 'axios'
+import { useForm } from '@formcarry/react'
+import { PopupWidget } from 'react-calendly'
+
 const Fwrapper = () => {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-  const [modalShow, setModalShow] = useState(false);
+  const [show, setShow] = useState(false)
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(true)
+  const [modalShow, setModalShow] = useState(false)
   const [inputstate, setInputstate] = useState({
-    first_name: "",
-    last_name: "",
-    company: "",
-    email: "",
-    phone_no: "",
-    message: "",
-  });
-  const formhandler = async (e) => {
-    e.preventDefault();
-    const body = JSON.parse(JSON.stringify(inputstate));
-    await axios.post("http://13.212.178.94:8081/send-mail", body).then((res) => {
-      console.log("res", res);
-      swal("Thank you!", "Our Team Will Contact You Shortly", "success");
-    });
-  };
+    first_name: '',
+    last_name: '',
+    company: '',
+    email: '',
+    phone_no: '',
+    message: '',
+  })
+  // const formhandler = async (e) => {
+  //   e.preventDefault();
+  //   const body = JSON.parse(JSON.stringify(inputstate));
+  //   await axios.post("http://13.212.178.94:8081/send-mail", body).then((res) => {
+  //     console.log("res", res);
+  //     swal("Thank you!", "Our Team Will Contact You Shortly", "success");
+  //   });
+  // };
+  const { state, submit } = useForm({
+    id: '6O96DYpHn',
+  })
+
+  if (state.submitting) {
+    swal('Thank you!', 'Our Team Will Contact You Shortly', 'success')
+  }
   const inputhandler = (e) => {
-    const { name, value } = e.target;
-    setInputstate({ ...inputstate, [name]: value });
-  };
+    const { name, value } = e.target
+    setInputstate({ ...inputstate, [name]: value })
+  }
   return (
     <div className="fwrapper py-4">
       <div className="container">
@@ -39,9 +49,9 @@ const Fwrapper = () => {
               Contact our team for demo and free trial.
             </p>
           </div>
-          <div className="col-md-6">
-            <div className="btn-controll">
-              <button
+          <div className="col-md-6 ">
+            <div className="btn-controll w-ft  ">
+              {/* <button
                 onClick={() => {
                   setModalShow(true);
                 }}
@@ -49,7 +59,13 @@ const Fwrapper = () => {
               >
                 <span>Click!</span>
                 <span>Schedule A Demo</span>
-              </button>
+              </button> */}
+              <PopupWidget
+                url="https://calendly.com/infraguard/infraguard-demo"
+                rootElement={document.getElementById('root')}
+                text="Schedule A Demo"
+                className="custom-btn btn-12"
+              />
             </div>
           </div>
         </div>
@@ -60,7 +76,7 @@ const Fwrapper = () => {
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
-        <form onSubmit={formhandler}>
+        <form onSubmit={submit}>
           <Modal.Header>
             <Modal.Title
               id="contained-modal-title-vcenter"
@@ -131,7 +147,7 @@ const Fwrapper = () => {
                   name="message"
                   placeholder="Message"
                   onChange={inputhandler}
-                  style={{ height: "110px" }}
+                  style={{ height: '110px' }}
                   className="modal-custom-input  ps-3"
                 />
               </div>
@@ -145,7 +161,7 @@ const Fwrapper = () => {
         </form>
       </Modal>
     </div>
-  );
-};
+  )
+}
 
-export default Fwrapper;
+export default Fwrapper

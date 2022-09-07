@@ -1,207 +1,218 @@
-import "./index.css";
-import "animate.css";
-import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
-import swal from "sweetalert";
-import axios from "axios";
-import Home6 from "../../assets/main-home.png";
-import { useEffect, useState } from "react";
+import './index.css'
+import 'animate.css'
+import Modal from 'react-bootstrap/Modal'
+import Button from 'react-bootstrap/Button'
+import swal from 'sweetalert'
+import axios from 'axios'
+import Home6 from '../../assets/main-home.png'
+import { useEffect, useState } from 'react'
+import { useForm } from '@formcarry/react'
+import { PopupWidget } from 'react-calendly'
+import { Link } from 'react-router-dom'
+
 export default function UpperBody() {
   const [classname1, setClassname1] = useState({
     mode: false,
-    Classaccess1: "chatBox-hide",
-  });
+    Classaccess1: 'chatBox-hide',
+  })
   const [classname2, setClassname2] = useState({
     mode: false,
-    Classaccess2: "chatBox-hide",
-  });
+    Classaccess2: 'chatBox-hide',
+  })
   const [classname3, setClassname3] = useState({
     mode: false,
-    Classaccess3: "chatBox-hide",
-  });
+    Classaccess3: 'chatBox-hide',
+  })
   const [classname4, setClassname4] = useState({
     mode: false,
-    Classaccess4: "chatBox-hide",
-  });
+    Classaccess4: 'chatBox-hide',
+  })
   const [classname5, setClassname5] = useState({
     mode: false,
-    Classaccess5: "chatBox-hide",
-  });
+    Classaccess5: 'chatBox-hide',
+  })
   const [classname6, setClassname6] = useState({
     mode: false,
-    Classaccess6: "chatBox-hide",
-  });
+    Classaccess6: 'chatBox-hide',
+  })
 
   // end state
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-  const [modalShow, setModalShow] = useState(false);
+  const [show, setShow] = useState(false)
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(true)
+  const [modalShow, setModalShow] = useState(false)
   const [inputstate, setInputstate] = useState({
-    first_name: "",
-    last_name: "",
-    company: "",
-    email: "",
-    phone_no: "",
-    message: "",
-  });
+    first_name: '',
+    last_name: '',
+    company: '',
+    email: '',
+    phone_no: '',
+    message: '',
+  })
   const showinfo1 = () => {
     setClassname1({
       mode: true,
-      Classaccess1: "chatBox1",
-    });
+      Classaccess1: 'chatBox1',
+    })
     classname1.mode
       ? setClassname1({
           mode: false,
-          Classaccess1: "chatBox-hide",
+          Classaccess1: 'chatBox-hide',
         })
       : setClassname1({
           mode: true,
-          Classaccess1: "chatBox1",
-        });
-  };
+          Classaccess1: 'chatBox1',
+        })
+  }
   const showinfo2 = () => {
     setClassname2({
       mode: true,
-      Classaccess2: "chatBox2",
-    });
+      Classaccess2: 'chatBox2',
+    })
     classname2.mode
       ? setClassname2({
           mode: false,
-          Classaccess2: "chatBox-hide",
+          Classaccess2: 'chatBox-hide',
         })
       : setClassname2({
           mode: true,
-          Classaccess2: "chatBox2",
-        });
-  };
+          Classaccess2: 'chatBox2',
+        })
+  }
   const showinfo3 = () => {
     setClassname3({
       mode: true,
-      Classaccess3: "chatBox3",
-    });
+      Classaccess3: 'chatBox3',
+    })
     classname3.mode
       ? setClassname3({
           mode: false,
-          Classaccess3: "chatBox-hide",
+          Classaccess3: 'chatBox-hide',
         })
       : setClassname3({
           mode: true,
-          Classaccess3: "chatBox3",
-        });
-  };
+          Classaccess3: 'chatBox3',
+        })
+  }
   const showinfo4 = () => {
     setClassname4({
       mode: true,
-      Classaccess4: "chatBox4",
-    });
+      Classaccess4: 'chatBox4',
+    })
     classname4.mode
       ? setClassname4({
           mode: false,
-          Classaccess4: "chatBox-hide",
+          Classaccess4: 'chatBox-hide',
         })
       : setClassname4({
           mode: true,
-          Classaccess4: "chatBox4",
-        });
-  };
+          Classaccess4: 'chatBox4',
+        })
+  }
   const showinfo5 = () => {
     setClassname5({
       mode: true,
-      Classaccess5: "chatBox5",
-    });
+      Classaccess5: 'chatBox5',
+    })
     classname5.mode
       ? setClassname5({
           mode: false,
-          Classaccess5: "chatBox-hide",
+          Classaccess5: 'chatBox-hide',
         })
       : setClassname5({
           mode: true,
-          Classaccess5: "chatBox5",
-        });
-  };
+          Classaccess5: 'chatBox5',
+        })
+  }
   const showinfo6 = () => {
     setClassname6({
       mode: true,
-      Classaccess6: "chatBox6",
-    });
+      Classaccess6: 'chatBox6',
+    })
     classname6.mode
       ? setClassname6({
           mode: false,
-          Classaccess6: "chatBox-hide",
+          Classaccess6: 'chatBox-hide',
         })
       : setClassname6({
           mode: true,
-          Classaccess6: "chatBox6",
-        });
-  };
+          Classaccess6: 'chatBox6',
+        })
+  }
   useEffect(() => {
     setClassname1({
       mode: true,
-      Classaccess1: "chatBox1",
-    });
+      Classaccess1: 'chatBox1',
+    })
     setClassname2({
       mode: true,
-      Classaccess2: "chatBox2",
-    });
+      Classaccess2: 'chatBox2',
+    })
     setClassname3({
       mode: true,
-      Classaccess3: "chatBox3",
-    });
+      Classaccess3: 'chatBox3',
+    })
     setClassname4({
       mode: true,
-      Classaccess4: "chatBox4",
-    });
+      Classaccess4: 'chatBox4',
+    })
     setClassname5({
       mode: true,
-      Classaccess5: "chatBox5",
-    });
+      Classaccess5: 'chatBox5',
+    })
     setClassname6({
       mode: true,
-      Classaccess6: "chatBox6",
-    });
+      Classaccess6: 'chatBox6',
+    })
 
     setTimeout(() => {
       setClassname1({
         mode: false,
-        Classaccess1: "chatBox-hide",
-      });
+        Classaccess1: 'chatBox-hide',
+      })
       setClassname2({
         mode: false,
-        Classaccess2: "chatBox-hide",
-      });
+        Classaccess2: 'chatBox-hide',
+      })
       setClassname3({
         mode: false,
-        Classaccess3: "chatBox-hide",
-      });
+        Classaccess3: 'chatBox-hide',
+      })
       setClassname4({
         mode: false,
-        Classaccess4: "chatBox-hide",
-      });
+        Classaccess4: 'chatBox-hide',
+      })
       setClassname5({
         mode: false,
-        Classaccess5: "chatBox-hide",
-      });
+        Classaccess5: 'chatBox-hide',
+      })
       setClassname6({
         mode: false,
-        Classaccess6: "chatBox-hide",
-      });
-    }, 5000);
-  }, []);
-  const formhandler = async (e) => {
-    e.preventDefault();
-    const body = JSON.parse(JSON.stringify(inputstate));
-    await axios
-      .post("http://13.212.178.94:8081/send-mail", body)
-      .then((res) => {
-        console.log("res", res);
-        swal("Thank you!", "Our Team Will Contact You Shortly", "success");
-      });
-  };
+        Classaccess6: 'chatBox-hide',
+      })
+    }, 5000)
+  }, [])
+  // const formhandler = async (e) => {
+  //   e.preventDefault();
+  //   const body = JSON.parse(JSON.stringify(inputstate));
+  //   await axios
+  //     .post("http://13.212.178.94:8081/send-mail", body)
+  //     .then((res) => {
+  //       console.log("res", res);
+  //       swal("Thank you!", "Our Team Will Contact You Shortly", "success");
+  //     });
+  // };
+  const { state, submit } = useForm({
+    id: '6O96DYpHn',
+  })
+
+  if (state.submitting) {
+    swal('Thank you!', 'Our Team Will Contact You Shortly', 'success')
+  }
   const inputhandler = (e) => {
-    const { name, value } = e.target;
-    setInputstate({ ...inputstate, [name]: value });
-  };
+    const { name, value } = e.target
+    setInputstate({ ...inputstate, [name]: value })
+  }
   return (
     <div className="container-fluid home_bg d-flex">
       <div className="container align-self-center">
@@ -220,8 +231,8 @@ export default function UpperBody() {
               </a>
               <span className="fs-is">is!</span>
             </h4>
-            <div className="mb-4">
-              <button
+            <div className="mb-4 w-ft">
+              {/* <button
                 onClick={() => {
                   setModalShow(true);
                 }}
@@ -229,7 +240,13 @@ export default function UpperBody() {
               >
                 <span>Click!</span>
                 <span>Schedule A Demo</span>
-              </button>
+              </button> */}
+              <PopupWidget
+                url="https://calendly.com/infraguard/infraguard-demo"
+                rootElement={document.getElementById('root')}
+                text="Schedule A Demo"
+                className="custom-btn btn-12"
+              />
             </div>
           </div>
 
@@ -303,13 +320,16 @@ export default function UpperBody() {
           </div>
         </div>
       </div>
-      <Modal
+      {/* <Link to={'/thanks'}>
+        <button className="custom-btn">hello</button>
+      </Link> */}
+      {/* <Modal
         show={modalShow}
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
-        <form onSubmit={formhandler}>
+        <form onSubmit={submit}>
           <Modal.Header>
             <Modal.Title
               id="contained-modal-title-vcenter"
@@ -392,7 +412,7 @@ export default function UpperBody() {
             </Button>
           </Modal.Footer>
         </form>
-      </Modal>
+      </Modal> */}
     </div>
-  );
+  )
 }

@@ -790,3 +790,7 @@
     justify-content: center;
   }
 }
+
+.w-ft{
+  width: fit-content;
+}
